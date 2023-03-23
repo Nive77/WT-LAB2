@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Contact</title>
+</head>
+
+<body>
+  <form action="" name="myForm" method="get" onsubmit="validate()">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="fname">First name</label>
+                  <input type="text" class="form-control" placeholder="Enter your first name here" if="fname" name="fname"required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="lname">Last name</label>
+                  <input type="text" class="form-control" id="lname">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="text-black" for="fdob">DOB</label>
+                  <input type="date" class="form-control" id="dob"required>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="text-black" for="fdob">Age</label>
+                  <input type="number" class="form-control" id="age" name="age" min="18" max="70"required>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label required="">Gender</label><br>
+                  <input type="radio" id="contactChoice1" name="contact" value="male">
+                  <label for="contactChoice1">Male</label>
+                  <br>
+                  <input type="radio" id="contactChoice1" name="contact" value="female">
+                  <label for="contactChoice1">Female</label>
+                  <br>
+                  <input type="radio" id="contactChoice1" name="contact" value="others">
+                  <label for="contactChoice1">Others</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-black" for="email">Email address</label>
+              <input type="email" class="form-control" id="mail" name="mail">
+            </div>
+            
+            <div class="form-group">
+              <label class="text-black" for="message">Address</label>
+              <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+            </div>
+          
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+       
+      </div>
+    </div>
+  </form>
+    
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+   
+
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+ 
+    
+    <script src="js/custom.js"></script>
+  
+    <script>
+	
+      function validate(){
+        var fnmae=document.myForm.fname.value;
+        if( document.myForm.fname.value == "" ) {
+            alert( "Please provide your First name!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         if( document.myForm.lname.value == "" ) {
+            alert( "Please provide your Last name!" );
+            document.myForm.lname.focus() ;
+            return false;
+         }
+        
+        }
+        function validateEmail() {
+         var mail = document.myForm.mail.value;
+         atpos = mail.indexOf("@");
+         dotpos = mail.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.mail.focus() ;
+            return false;
+         }
+         else(document.myForm.mail.value == ""){
+          alert( "Please provide your First name!" );
+            document.myForm.mail.focus() ;
+            return false;
+         }
+         return( true );
+      }
+
+
+  
+
+      </script>
+  
+
+
+
+  
+ 
+ 
+ 
+
+
+</body>
+
+</html>
